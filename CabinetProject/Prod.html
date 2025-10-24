@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Gallery | Cabinets Masters</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #3e2f2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #5a4033;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #7a5641;
+    }
+
+    .gallery {
+      padding: 40px 10%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .gallery-item h3 {
+      padding: 15px;
+      color: #5a4033;
+    }
+
+    footer {
+      background-color: #3e2f2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cabinets Masters Gallery</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="images/kitchen1.jpg" alt="Modern Kitchen Cabinet">
+      <h3>Modern Kitchen Cabinet</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/wardrobe1.jpg" alt="Elegant Wardrobe">
+      <h3>Elegant Wardrobe</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/bathroom1.jpg" alt="Bathroom Storage">
+      <h3>Bathroom Storage</h3>
+    </div>
+    <!-- Add more items as needed -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cabinets Masters | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
