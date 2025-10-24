@@ -3,6 +3,236 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<p>designs
-</p>
-  </html>
+  <title>Contact Us | Cabinets Masters</title>
+  <style>
+
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background-color: #3e2f2f;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .menu-toggle button:hover {
+      background-color:#7a5641 ;
+      transition: background 0.3s;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #5a4033;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-menu a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .side-menu a:hover {
+      background-color: #7a5641;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/CabinetImage.jpg') center/cover no-repeat;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #5a4033;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #7a5641;
+    }
+
+    .contact-section {
+      flex: 1;
+      padding: 40px 10%;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      color: #5a4033;
+      margin-bottom: 20px;
+    }
+
+    .contact-details {
+      margin-bottom: 30px;
+      line-height: 1.8;
+      font-size: 1rem;
+      color: #3e2f2f;
+    }
+
+    .toggle-button {
+      background-color: #5a4033;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+
+    .toggle-button:hover {
+      background-color: #7a5641;
+    }
+
+    .form-container {
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #3e2f2f;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #5a4033;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #7a5641;
+    }
+
+    footer {
+      background-color: #3e2f2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <div class="side-menu" id="sideMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="Gallery.html">🖼️ Gallery</a>
+    <a href="Contact Us.html">📞 Contact Us</a>
+    <a href="#">🛠️ Services</a>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Contact Us.html">Contact Us</a>
+  </nav>
+
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+
+    <div class="contact-details">
+      <p><strong>📍 Location:</strong> Kamakis Plaza, Ruiru, Nairobi</p>
+      <p><strong>📞 Phone:</strong> +254 729 554 475</p>
+      <p><strong>📧 Email:</strong> cabinetmasters2024@gmail.com</p>
+      <p><strong>📱 Tiktok:</strong> Cabinet Master Styles & Finishes  @cabinetmasterstyles</p>
+      <p><strong>🕒 Hours:</strong> Mon–Sat, 8:00 AM – 6:00 PM</p>
+    </div>
+
+    <button class="toggle-button" onclick="toggleForm()">Send Us a Message</button>
+
+    <div class="form-container" id="formContainer">
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Cabinet Master Styles & Finishes | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+    const menu = document.getElementById('sideMenu');
+    menu.style.left = menu.style.left === '0px' ? '-250px' : '0px';
+  }
+
+    function toggleForm() {
+      const form = document.getElementById('formContainer');
+      form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
