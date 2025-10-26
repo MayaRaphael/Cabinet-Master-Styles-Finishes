@@ -66,6 +66,12 @@
       justify-content: center;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -75,6 +81,14 @@
 
     nav a:hover {
       background-color: #7a5641;
+    }
+
+    nav img {
+      width: 55px;
+      height: 55px;
+      border-radius: 10px;
+      margin-right: 150px;
+      flex-shrink: 0;
     }
 
     .contact-section {
@@ -184,9 +198,14 @@
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="Gallery.html">Gallery</a>
-    <a href="Contact Us.html">Contact Us</a>
+    <div class="nav-links">
+      <img src="images/CMasters Logo.png" class="logo">
+      <a href="index.html">Home</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact Us.html">Contact Us</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
   </nav>
 
   <section class="contact-section">
@@ -215,6 +234,10 @@
 
         <button type="submit">Send Message</button>
       </form>
+
+      <div id="confirmationMessage" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
+        Thank You! Your message has been sent.
+      </div>
     </div>
   </section>
 

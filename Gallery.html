@@ -28,17 +28,18 @@
       z-index: -1;
     }
 
-    /*header {
-      background-color: #3e2f2f;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }*/
-
     nav {
       background-color: #5a4033;
       display: flex;
-      justify-content: center;
+      justify-content:center;
+      padding-bottom: 2.5px;
+      padding-top: 2.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -50,6 +51,25 @@
 
     nav a:hover {
       background-color: #7a5641;
+    }
+
+    nav img {
+      width: 55px;
+      height: 55px;
+      border-radius: 10px;
+      margin-right: 150px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 600px) {
+      .nav-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
     }
 
     .menu-toggle {
@@ -153,13 +173,18 @@
 
  
   <nav>
-    <a href="index.html">Home</a>
-    <a href="#home">Gallery</a>
-    <a href="Contact Us.html">Contact Us</a>
+      <div class="nav-links">
+        <img src="images/CMasters Logo.png" alt="Logo" class="logo">
+        <a href="index.html">Home</a>
+        <a href="#home">Gallery</a>
+        <a href="Contact Us.html">Contact Us</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
   </nav>
 
   <section class="dropdown-gallery">
-    <h2>Modern Kitchen Cabinets</h2>
+    <h2>Modern Kitchen Designs</h2>
     <div class="gallery-images" id="kitchen">
       <img src="images.jpeg" alt="Kitchen Cabinet 1">
       <img src="cream kitchen.webp" alt="Kitchen Cabinet 2">
